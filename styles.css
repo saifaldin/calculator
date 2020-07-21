@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgb(69, 206, 142), rgba(0, 212, 255, 1));
+    font-family: sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0.5rem;
+}
+
+.output .prev-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+ 
+.output .curr-operand {
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
+ 
+.span2 {
+    grid-column: span 2;
+}
+
+button {
+    border: none;
+    background-color: #d8d4d4bb;
+    border: 0.1rem solid #d8d4d4;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover,
+button:active {
+    background-color: rgba(240, 240, 240, 0.9);
+    border: 0.1rem solid rgba(255, 255, 255, 0.9);
+}
